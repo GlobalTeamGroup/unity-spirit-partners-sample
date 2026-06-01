@@ -1,0 +1,281 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="description" content="ВАША КОМПАНИЯ — Ваш бизнес-консалтинг и стратегическое партнёрство." />
+  <title>ВАША КОМПАНИЯ — Ваша ниша</title>
+  <link rel="icon" type="image/png" href="images/logo.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- CINEMATIC CANVAS BACKGROUND -->
+  <canvas id="gl-canvas"></canvas>
+  <!-- PARTICLE OVERLAY -->
+  <canvas id="particle-canvas"></canvas>
+  <!-- GRAIN OVERLAY -->
+  <div class="grain-overlay"></div>
+
+  <!-- NAVBAR -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-inner">
+      <a href="#hero" class="nav-logo" data-scroll="0">
+        <img src="images/logo.png" alt="Logo" class="logo-img" />
+        <span class="logo-text">ВАША <span class="logo-accent">КОМПАНИЯ</span></span>
+      </a>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#" data-scroll="1" class="nav-link">Services</a></li>
+        <li><a href="#" data-scroll="2" class="nav-link">Portfolio</a></li>
+        <li><a href="#" data-scroll="3" class="nav-link">Process</a></li>
+        <li><a href="#" data-scroll="4" class="nav-link">About</a></li>
+        <li><a href="#" data-scroll="5" class="nav-link nav-cta">Contact</a></li>
+      </ul>
+      <button class="burger" id="burger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- MOBILE DRAWER -->
+  <div class="nav-scrim" id="nav-scrim" hidden></div>
+  <div class="nav-drawer" id="nav-drawer" hidden>
+    <button class="drawer-close" id="drawer-close" aria-label="Close">✕</button>
+    <ul class="drawer-links" id="drawer-links">
+      <li><a href="#" data-scroll="1" class="drawer-link">Services</a></li>
+      <li><a href="#" data-scroll="2" class="drawer-link">Portfolio</a></li>
+      <li><a href="#" data-scroll="3" class="drawer-link">Process</a></li>
+      <li><a href="#" data-scroll="4" class="drawer-link">About</a></li>
+      <li><a href="#" data-scroll="5" class="drawer-link">Contact</a></li>
+    </ul>
+    <div class="drawer-contacts">
+    </div>
+  </div>
+
+  <!-- MAIN SCROLL CONTAINER -->
+  <div id="ui-layer">
+    <div class="stage">
+
+      <!-- SECTION 0: HERO -->
+      <section class="page is-active" data-index="0" id="hero">
+        <div class="page-inner hero-inner">
+          <img src="images/logo.png" alt="Logo" class="hero-logo reveal-3d">
+          <div class="hero-badge reveal-3d">ВАШ БРЕНД • ВАША НИША • ВАШЕ НАПРАВЛЕНИЕ</div>
+          <h1 class="hero-title reveal-3d">
+            ЗДЕСЬ БУДЕТ ИМЯ<br><span class="gradient-text">ВАШЕЙ КОМПАНИИ</span>
+          </h1>
+          <p class="hero-subtitle reveal-3d">Тут Вы можете написать свой слоган, краткое описание или горячее предложение - всё, что пожелаете!</p>
+          <div class="hero-cta-group reveal-3d">
+            <a href="#" data-scroll="1" class="btn-primary">Сделать кнопку</a>
+            <a href="#" data-scroll="5" class="btn-outline">Свои ссылки</a>
+          </div>
+          <div class="hero-scroll-hint">
+            <div class="scroll-line"></div>
+            <span>scroll</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECTION 1: SERVICES -->
+      <section class="page" data-index="1" id="services">
+        <div class="page-inner">
+          <div class="section-badge reveal-3d">What We Do</div>
+          <h2 class="section-title reveal-3d">Ваши<br><span class="gradient-text">услуги</span></h2>
+          <p class="section-desc reveal-3d">Здесь вы можете рассказать о своём предложении как в примерах ниже.</p>
+          <div class="services-grid reveal-3d">
+            <div class="service-card">
+              <div class="service-icon">📊</div>
+              <h3>Strategic Consulting</h3>
+              <p>Tailored strategies for sustainable growth. Market positioning, competitive analysis, and roadmap development for ambitious enterprises.</p>
+            </div>
+            <div class="service-card">
+              <div class="service-icon">💰</div>
+              <h3>Investment Advisory</h3>
+              <p>Expert guidance on capital allocation, portfolio strategy, and investment opportunities. Maximizing returns with calculated precision.</p>
+            </div>
+            <div class="service-card">
+              <div class="service-icon">🤝</div>
+              <h3>Business Development</h3>
+              <p>Identifying and nurturing strategic partnerships. Expanding market reach through meaningful connections and collaborations.</p>
+            </div>
+            <div class="service-card">
+              <div class="service-icon">📈</div>
+              <h3>Market Analysis</h3>
+              <p>Data-driven insights into market trends, consumer behavior, and competitive landscapes. Informed decisions, superior outcomes.</p>
+            </div>
+            <div class="service-card">
+              <div class="service-icon">🔄</div>
+              <h3>M&A Advisory</h3>
+              <p>End-to-end mergers and acquisitions support. Due diligence, valuation, negotiation, and seamless integration.</p>
+            </div>
+            <div class="service-card">
+              <div class="service-icon">🛡️</div>
+              <h3>Risk Management</h3>
+              <p>Comprehensive risk assessment and mitigation strategies. Protecting your assets while pursuing aggressive growth.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECTION 2: PORTFOLIO -->
+      <section class="page" data-index="2" id="portfolio">
+        <div class="page-inner">
+          <div class="section-badge reveal-3d">Our Track Record</div>
+          <h2 class="section-title reveal-3d">Здесь могут быть<br><span class="gradient-text">примеры ваших работ</span></h2>
+          <p class="section-desc reveal-3d">Добавьте то, что всех поразит</p>
+          <div class="collections-grid reveal-3d">
+            <div class="collection-card card-large">
+              <div class="collection-overlay" style="background:linear-gradient(to top,rgba(6,4,10,0.92) 0%,rgba(6,4,10,0.4) 100%);">
+                <span class="collection-label">ООО «Рога и Копыта» · Город N</span>
+                <h3>Проект «Альфа»</h3>
+                <p>Стратегическое партнёрство, которое создаёт ценность и приносит результат.</p>
+              </div>
+            </div>
+            <div class="collection-card card-medium">
+              <div class="collection-overlay" style="background:linear-gradient(to top,rgba(6,4,10,0.92) 0%,rgba(6,4,10,0.4) 100%);">
+                <span class="collection-label">Компания «Авангард» · Побережье</span>
+                <h3>Лофт «Меридиан»</h3>
+                <p>Успешное сотрудничество с компанией в области развития бизнеса</p>
+              </div>
+            </div>
+            <div class="collection-card card-medium">
+              <div class="collection-overlay" style="background:linear-gradient(to top,rgba(6,4,10,0.92) 0%,rgba(6,4,10,0.4) 100%);">
+                <span class="collection-label">Корпорация «Феникс» · Бизнес-район</span>
+                <h3>Комплекс «Луч»</h3>
+                <p>Комплексное решение для корпоративного клиента</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECTION 3: PROCESS -->
+      <section class="page" data-index="3" id="process">
+        <div class="page-inner">
+          <div class="section-badge reveal-3d">Our Methodology</div>
+          <h2 class="section-title reveal-3d">The<br><span class="gradient-text">Partnership Journey</span></h2>
+          <p class="section-desc reveal-3d">Расскажите о том, как выглядит ваше сотрудничество с клиентами, как в примере ниже</p>
+          <div class="production-layout reveal-3d">
+            <div class="production-stats">
+              <div class="stat-card">
+                <span class="stat-number">15+</span>
+                <span class="stat-label">years of expertise</span>
+              </div>
+              <div class="stat-card">
+                <span class="stat-number">200+</span>
+                <span class="stat-label">clients served</span>
+              </div>
+              <div class="stat-card">
+                <span class="stat-number">98%</span>
+                <span class="stat-label">client retention</span>
+              </div>
+              <div class="stat-card">
+                <span class="stat-number">24/7</span>
+                <span class="stat-label">dedicated support</span>
+              </div>
+              <div class="production-steps">
+                <div class="prod-step"><span class="step-num">01</span><span class="step-text">Discovery & strategic alignment assessment</span></div>
+                <div class="prod-step"><span class="step-num">02</span><span class="step-text">Market research & opportunity mapping</span></div>
+                <div class="prod-step"><span class="step-num">03</span><span class="step-text">Partnership structuring & negotiation</span></div>
+                <div class="prod-step"><span class="step-num">04</span><span class="step-text">Implementation & integration support</span></div>
+                <div class="prod-step"><span class="step-num">05</span><span class="step-text">Performance monitoring & optimization</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECTION 4: ABOUT -->
+      <section class="page" data-index="4" id="about">
+        <div class="page-inner">
+          <div class="section-badge reveal-3d">About Us</div>
+          <h2 class="section-title reveal-3d">О<br><span class="gradient-text">нас</span></h2>
+          <p class="section-desc reveal-3d">Расскажите о достижениях Вашей компании, поделитесь хорошими отзывами</p>
+          <div class="about-grid reveal-3d">
+            <div class="about-card">
+              <div class="about-icon">🌍</div>
+              <h3>Global Network</h3>
+              <p>Extensive international network spanning 15+ countries. Local expertise with global perspective for cross-border success.</p>
+            </div>
+            <div class="about-card">
+              <div class="about-icon">💎</div>
+              <h3>Proven Excellence</h3>
+              <p>Track record of delivering measurable results. Every engagement backed by data-driven strategies and industry expertise.</p>
+            </div>
+            <div class="about-card">
+              <div class="about-icon">🤝</div>
+              <h3>Client-First Approach</h3>
+              <p>Your success is our mission. Dedicated teams providing personalized attention and tailored solutions.</p>
+            </div>
+            <div class="about-card">
+              <div class="about-icon">🚀</div>
+              <h3>Innovation-Driven</h3>
+              <p>Leveraging cutting-edge analytics and market intelligence. Staying ahead of trends to give you the competitive edge.</p>
+            </div>
+          </div>
+          <div class="about-cta reveal-3d">
+          </div>
+        </div>
+      </section>
+
+      <!-- SECTION 5: CONTACT -->
+      <section class="page" data-index="5" id="contact">
+        <div class="page-inner">
+          <div class="section-badge reveal-3d">Get In Touch</div>
+          <h2 class="section-title reveal-3d">Start Your<br><span class="gradient-text">Partnership Journey</span></h2>
+          <p class="section-desc reveal-3d">Здесь укажите свои контакты, адрес, соцсети, чтобы клиент смог с Вами связаться</p>
+          <div class="contact-layout reveal-3d" style="display:flex;justify-content:center;">
+            <div class="contact-info-card">
+              <h3>Contact Us</h3>
+              <div class="contact-item">
+                <span class="contact-icon">📧</span>
+                <div>
+                  <strong>Email</strong>
+                  <a href="mailto:#">ВАША ПОЧТА</a>
+                </div>
+              </div>
+              <div class="contact-item">
+                <span class="contact-icon">📞</span>
+                <div>
+                  <strong>Phone</strong>
+                  <a href="tel:#">ВАШ ТЕЛЕФОН</a>
+                </div>
+              </div>
+              <div class="contact-item">
+                <span class="contact-icon">📍</span>
+                <div>
+                  <strong>Address</strong>
+                  <span>ВАШ АДРЕС</span>
+                </div>
+              </div>
+              <div class="contact-item">
+                <span class="contact-icon">⏰</span>
+                <div>
+                  <strong>Business Hours</strong>
+                  <span>Mon–Fri: 9:00 AM – 6:00 PM EST</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div style="text-align:center;margin-top:32px">
+            <a href="https://globalplus.tech/#page-4" class="btn-outline" style="font-size:16px;padding:14px 40px;display:inline-block;text-decoration:none;">ВЕРНУТЬСЯ НА ГЛАВНУЮ</a>
+          </div>
+        </div>
+        <!-- FOOTER -->
+        <footer class="footer">
+          <div class="footer-inner">
+            <span class="footer-logo">ВАША КОМПАНИЯ</span>
+            <span class="footer-copy">© 2026 ВАША КОМПАНИЯ</span>
+          </div>
+        </footer>
+      </section>
+
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
